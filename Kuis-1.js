@@ -12,16 +12,18 @@ class Karyawan {
 class KaryawanTetap extends Karyawan {
     gajiKaryawan(nama, persenanTetap) {
         super.nama = nama;
-        let totalGajiKaryawanTetap = this.gajiKaryawanTetap + (this.gajiKaryawanTetap *  persenanTetap / 100);
-        return console.log(`Total gaji karyawan ${this.nama} adalah ${totalGajiKaryawanTetap}`);
+        let bonusTetap = this.gajiKaryawanTetap *  persenanTetap / 100;
+        let totalGajiKaryawanTetap = this.gajiKaryawanTetap + bonusTetap;
+        return console.log(`Gaji karyawan tetap adalah ${this.gajiKaryawanTetap} dengan bonus `+ bonusTetap +`\n`+`Total gaji karyawan ${this.nama} adalah ${totalGajiKaryawanTetap}`);
     }
 }
 
 class KaryawanKontrak extends Karyawan {
     gajiKaryawan(nama, persenanKontrak) {
         super.nama = nama;
-        let totalGajiKaryawanKontrak = this.gajiKaryawanKontrak + (this.gajiKaryawanKontrak * persenanKontrak / 100);
-        return console.log(`Total gaji karyawan ${this.nama} adalah ${totalGajiKaryawanKontrak}`);
+        let bonusKontrak = this.gajiKaryawanKontrak * persenanKontrak / 100;
+        let totalGajiKaryawanKontrak = this.gajiKaryawanKontrak + bonusKontrak;
+        return console.log(`Gaji karyawan kontrak adalah ${this.gajiKaryawanKontrak} dengan bonus ` + bonusKontrak + `\n` + `Total gaji karyawan ${this.nama} adalah ${totalGajiKaryawanKontrak}`);
     }
 }
 
